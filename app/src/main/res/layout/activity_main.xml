@@ -4,7 +4,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="#ffffffff">
+    android:background="#ffffffff"
+    android:fillViewport="true">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+     >
 
     <TextView
         android:id="@+id/main_title"
@@ -14,7 +24,7 @@
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:textSize="30sp"
-        android:textColor="#000000"
+        android:textColor="@color/black"
         android:textStyle="bold"
         android:autoText="false" />
 
@@ -25,7 +35,8 @@
         android:layout_marginTop="44dp"
         android:layout_below="@+id/main_title"
         android:layout_alignStart="@+id/capstone_button"
-        android:layout_alignEnd="@+id/capstone_button"/>
+        android:layout_alignEnd="@+id/capstone_button"
+        android:onClick="showToast"/>
 
     <Button
         style="@style/appButton"
@@ -33,7 +44,8 @@
         android:id="@+id/scores_button"
         android:layout_below="@+id/streamer_button"
         android:layout_alignStart="@+id/streamer_button"
-        android:layout_alignEnd="@+id/streamer_button"/>
+        android:layout_alignEnd="@+id/streamer_button"
+        android:onClick="showToast"/>
 
     <Button
         style="@style/appButton"
@@ -41,7 +53,8 @@
         android:id="@+id/library_button"
         android:layout_below="@+id/scores_button"
         android:layout_alignEnd="@+id/scores_button"
-        android:layout_alignStart="@+id/scores_button"/>
+        android:layout_alignStart="@+id/scores_button"
+        android:onClick="showToast"/>
 
     <Button
         style="@style/appButton"
@@ -49,7 +62,8 @@
         android:id="@+id/bigger_button"
         android:layout_below="@+id/library_button"
         android:layout_alignEnd="@+id/library_button"
-        android:layout_alignStart="@+id/library_button"/>
+        android:layout_alignStart="@+id/library_button"
+        android:onClick="showToast"/>
 
     <Button
         style="@style/appButton"
@@ -57,7 +71,8 @@
         android:id="@+id/xyz_button"
         android:layout_below="@+id/bigger_button"
         android:layout_alignStart="@+id/bigger_button"
-        android:layout_alignEnd="@+id/bigger_button"/>
+        android:layout_alignEnd="@+id/bigger_button"
+        android:onClick="showToast"/>
 
     <Button
         style="@style/appButton"
@@ -65,6 +80,10 @@
         android:text="@string/capstone_app"
         android:id="@+id/capstone_button"
         android:layout_below="@+id/xyz_button"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:onClick="showToast"/>
+
+    </RelativeLayout>
+</ScrollView>
 
 </RelativeLayout>
